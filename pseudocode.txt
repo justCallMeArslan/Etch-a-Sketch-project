@@ -1,0 +1,7 @@
+get and fill container element (div) from the DOM
+
+for i 1 to 256 (16x16){
+    create a new div element 
+    add class/style for squares (pay attention to border and size)
+    Append the div to cintainer 
+}
