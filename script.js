@@ -15,7 +15,7 @@ function createGrid(columns) {
     mainContainer.replaceChildren(); // clear any existing grid cells (e.g while 
     // creating new grid as per user input)
 
-    const containerSize = 960;  // same as container's height in CSS
+    const containerSize = 750;  // same as container's height in CSS
     const rows = columns; // making grid square, more readable
     const singleDivSize = containerSize / columns; // divides height of each element equally
 
@@ -25,7 +25,7 @@ function createGrid(columns) {
         const singleDiv = document.createElement("div");
         singleDiv.classList.add("singleDiv");
         // set singleDiv size dynamically
-        singleDiv.style.width = `${960 / columns}px`; // dividing 100% width to numbers of columns to 
+        singleDiv.style.width = `${750 / columns}px`; // dividing 100% width to numbers of columns to 
         // fill all boxes precisely in % of total width
         singleDiv.style.height = `${singleDivSize}px`; // same as width but for height in px
 
@@ -39,16 +39,12 @@ function createGrid(columns) {
 
         singleDiv.addEventListener("mousedown", () => {
             singleDiv.style.backgroundColor = randomColor;
-        })
+        });
         singleDiv.addEventListener("mouseover", () => {
             if (isMouseDown) {
                 singleDiv.style.backgroundColor = randomColor;
             }
-        })
-
-        singleDiv.addEventListener('click', () => {
-            singleDiv.style.backgroundColor = "black";
-        })
+        });
 
         mainContainer.appendChild(singleDiv);
 

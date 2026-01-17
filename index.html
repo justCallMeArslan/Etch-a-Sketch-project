@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch project</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bubbler+One&family=Gravitas+One&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
 
 </head>
-<body>
-    <div id="container"></div>
-</body>
-</html>
 
+<body>
+    <div class="layout">
+
+        <div>
+            <button class="newGrid"> New Sketch</button>
+        </div>
+
+        <div id="container"></div>
+
+        <div class="buttons">
+            <p> Choose color: </p>
+            <button class="red">🔴</button>
+            <button class="white">⚪</button>
+            <button class="black">⚫</button>
+            <button class="RGB">🌈</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
