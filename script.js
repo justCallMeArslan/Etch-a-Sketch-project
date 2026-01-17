@@ -1,6 +1,7 @@
 // DOM references
 const mainContainer = document.querySelector("#container");
 const cell = document.querySelector(".singleDiv");
+const newSketchButton = document.querySelector(".newGrid");
 
 let isMouseDown = false;
 document.addEventListener("mousedown", () => {
@@ -9,6 +10,8 @@ document.addEventListener("mousedown", () => {
 document.addEventListener("mouseup", () => {
     isMouseDown = false;
 })
+
+
 
 // creating divs using DOM
 function createGrid(columns) {
@@ -47,8 +50,19 @@ function createGrid(columns) {
         });
 
         mainContainer.appendChild(singleDiv);
+    };
+};
 
-    }
-}
+createGrid(10);
 
-createGrid(25);
+function createNewSketch() {
+    newSketchButton.addEventListener("click", () => {
+        const userRequest = +prompt("How many columns do you want?", "10");
+        if (userRequest < 1 || userRequest > 100 || isNaN(userRequest)) {
+            alert("Wrong input, please use number between 1 and 100");
+        }
+        createGrid(userRequest);
+    });
+};
+
+createNewSketch();
