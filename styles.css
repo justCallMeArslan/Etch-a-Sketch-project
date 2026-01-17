@@ -43,6 +43,14 @@ p {
     border-radius: 25px;
     border-color: bisque;
 }
+.buttons .erase {
+    width: 80px;
+    font-family: "Gravitas One", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    
+}
 
 .newGrid {
     width: auto;
@@ -50,7 +58,5 @@ p {
     margin-top: 30px;
     background-color: white;
     font-size: 20px;
-    font-family: "Gravitas One", serif;
-    font-weight: 400;
-    font-style: normal;
+    
 }
