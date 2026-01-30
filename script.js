@@ -10,6 +10,8 @@ const eraseGrid = document.querySelector(".erase");
 let currentColor = "black";
 let currentGridSize = 10;
 
+
+// color pallet buttons
 whiteColor.addEventListener("click", () => {
     currentColor = "white"
 });
@@ -24,7 +26,7 @@ rgbColor.addEventListener("click", () => {
 })
 
 
-
+// mouse movement handler
 let isMouseDown = false;
 document.addEventListener("mousedown", () => {
     isMouseDown = true;
@@ -68,7 +70,7 @@ createGrid(currentGridSize);
 newSketchButton.addEventListener("click", () => {
     const userRequest = +prompt("How many columns do you want?", "10");
     if (userRequest < 1 || userRequest > 100 || !Number.isInteger(userRequest)) {
-        alert("Wrong input, please use number between 1 and 100");
+        alert("Wrong input, please use number from 1 to 100");
         return;
     };
     currentGridSize = userRequest;
